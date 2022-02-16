@@ -1,0 +1,82 @@
+file 9445 1645009358                                            
+version 2
+run General-0-20220216-12:02:33-900
+attr configname General
+attr datetime 20220216-12:02:33
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network scenario
+attr processid 900
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.world.playgroundSizeX 2500m
+param *.world.playgroundSizeY 2500m
+param *.world.playgroundSizeZ 100m
+param *.annotations.draw true
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 200m
+param *.connectionManager.drawMaxIntfDist true
+param *.manager.commandLine "\"sumo --no-step-log --remote-port $port --seed $seed --configuration-file $configFile\""
+param *.manager.configFile "\"sumo-scenario/manhattan.sumocfg\""
+param *.manager.autoShutdown true
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param **.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param **.nic.phy80211p.antennaOffsetZ 1.895m
+param *.obstacles.debug false
+param *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+param *.node[*].applType "\"containerVehicles\""
+param *.node[*].veinsmobility.x 1000
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.*.appl.headerLength 10bit
+param *.*.appl.beaconPacketLength 10byte
+param *.node[0].appl.clusterHead true
+param *.*.appl.beaconIntervalDefault 5s
+param *.*.appl.debugMode true
+param *.*.appl.migrationType 0
+param *.*.appl.preMigrationInterval 5s
+param *.*.appl.clientsStartUp 5s
+param *.*.appl.migrationStart 10s
+param *.*.appl.MQTTpublishers 5
+param *.*.appl.MQTTsubscribers 5
+param *.*.appl.MQTTmsgCount 20
+param *.*.appl.MQTTmsgSize 2048
+param *.*.appl.MQTTmsgQoS 2
+param *.*.appl.MQTTmsgInterval 1000
+param *.*.appl.MQTTmsgPretime 2000
+
+vector 0 scenario.node[0].veinsmobility posx ETV
+vector 1 scenario.node[0].veinsmobility posy ETV
+vector 2 scenario.node[1].veinsmobility posx ETV
+vector 3 scenario.node[1].veinsmobility posy ETV
+vector 4 scenario.node[0].veinsmobility speed ETV
+vector 5 scenario.node[1].veinsmobility speed ETV
+vector 6 scenario.node[0].veinsmobility acceleration ETV
+vector 7 scenario.node[0].veinsmobility co2emission ETV
+vector 8 scenario.node[1].veinsmobility acceleration ETV
+vector 9 scenario.node[1].veinsmobility co2emission ETV
+0	2780 756 2 4510 1 50 50 446.6 446.6 22330 9972578
+1	3536 756 2 4510 1 50 50 226.3 226.3 11315 2560584.5
+2	4292 756 2 4510 1 50 50 526.3 526.3 26315 13849584.5
+3	5048 756 2 4510 1 50 50 143.4 143.4 7170 1028178
+4	5804 548 3 4510 2 50 49 0 0 0 0
+5	6352 548 3 4510 2 50 49 0 0 0 0
+6	6900 540 4 4510 3 50 48 0 0 0 0
+7	7440 732 4 4510 3 50 48 0.973 0.973 46.704 45.442992
+8	8172 540 4 4510 3 50 48 0 0 0 0
+9	8712 732 4 4510 3 50 48 0.973 0.973 46.704 45.442992
+

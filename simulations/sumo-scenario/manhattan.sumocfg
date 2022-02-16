@@ -1,0 +1,17 @@
+<configuration>
+  <input>
+    <net-file value="manhattan.net.xml"/>
+    <route-files value="manhattan.rou.xml"/>
+    <additional-files value="manhattan.poly.xml"/>
+  </input>
+  <time>
+    <begin value="0"/>
+    <end value="2000"/>
+    <step-length value="1"/>
+  </time>
+  <gui_only>
+    <gui-settings-file value="manhattan.gui-settings.xml"/>
+  </gui_only>
+  <max-num-vehicles>200</max-num-vehicles>
+  <max-depart-delay>0</max-depart-delay>
+</configuration>

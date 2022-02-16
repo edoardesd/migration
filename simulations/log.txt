@@ -1,0 +1,130 @@
+
+Running configuration General, run #0...
+Assigned runID=General-0-20220216-11:58:54-31075
+Setting up network "scenario"...
+Initializing...
+Initializing module scenario, stage 0
+Initializing module scenario.simGod, stage 0
+[INFO]	[SIMGOD] === Welcome from SimGod ===
+[INFO]	Path: /home/antedo/migration/results_criu/0216/11-58
+Initializing module scenario.annotations, stage 0
+Initializing module scenario.world, stage 0
+Initializing module scenario.connectionManager, stage 0
+[INFO]	max interference distance:200
+Initializing module scenario.connectionManager, stage 1
+
+Running simulation...
+Initializing module scenario.node[0], stage 0
+Initializing module scenario.node[0].appl, stage 0
+[INFO]	0 - I'm the cluster head.
+Initializing module scenario.node[0].nic, stage 0
+Initializing module scenario.node[0].veinsmobility, stage 0
+Initializing module scenario.node[0].appl, stage 1
+[INFO]	ApplID: 0 - MAC ADDR: 9
+[INFO]	0 - Setting beacon time.
+Initializing module scenario.node[0].veinsmobility, stage 1
+Initializing module scenario.node[1], stage 0
+Initializing module scenario.node[1].appl, stage 0
+Initializing module scenario.node[1].nic, stage 0
+Initializing module scenario.node[1].veinsmobility, stage 0
+Initializing module scenario.node[1].appl, stage 1
+[INFO]	ApplID: 1 - MAC ADDR: 15
+[INFO]	1 - Setting beacon time.
+Initializing module scenario.node[1].veinsmobility, stage 1
+** Event #6  t=5  10% completed  (10% total)   scenario.simGod (SimGod, id=2)
+[INFO]	[SIMGOD] Start clients NOW!
+** Event #8  t=5.01381685189  10% completed  (10% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 5.01381685189...
+** Event #22  t=5.013886383591  10% completed  (10% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 0 received from 9
+** Event #23  t=5.117818481987  10% completed  (10% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 5.117818481987...
+** Event #37  t=5.117892767182  10% completed  (10% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 1 received from 15
+** Event #38  t=5.117892767182  10% completed  (10% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #44  t=10.01381685189  20% completed  (20% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 10.01381685189...
+** Event #58  t=10.013894150773  20% completed  (20% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 2 received from 9
+** Event #59  t=10.117818481987  20% completed  (20% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 10.117818481987...
+** Event #73  t=10.117887534364  20% completed  (20% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 3 received from 15
+** Event #74  t=10.117892767182  20% completed  (20% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #80  t=15.01381685189  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 15.01381685189...
+** Event #87  t=15.013886383591  30% completed  (30% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	Given speed: 0
+[INFO]	1 - Timer expired. Moving now.
+** Event #95  t=15.013888917955  30% completed  (30% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 4 received from 9
+** Event #96  t=15.117818481987  30% completed  (30% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 15.117818481987...
+** Event #103  t=15.117892767182  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	Given speed: 0
+[INFO]	0 - Timer expired. Moving now.
+[INFO]	Check p size: -1 bytes. Database size: -1 bytes.
+[INFO]	PATH check /home/antedo/migration/results_criu/0216/11-58
+** Event #104  t=15.117892767182  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #112  t=15.117895301546  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 5 received from 15
+** Event #118  t=20.01381685189  40% completed  (40% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 20.01381685189...
+** Event #132  t=20.013883685137  40% completed  (40% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 6 received from 9
+** Event #133  t=20.117818481987  40% completed  (40% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 20.117818481987...
+** Event #147  t=20.117890068728  40% completed  (40% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 7 received from 15
+** Event #153  t=25.01381685189  50% completed  (50% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 25.01381685189...
+** Event #167  t=25.013891452319  50% completed  (50% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 8 received from 9
+** Event #168  t=25.117818481987  50% completed  (50% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 25.117818481987...
+** Event #182  t=25.11788483591  50% completed  (50% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 9 received from 15
+** Event #188  t=30.01381685189  60% completed  (60% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 30.01381685189...
+** Event #202  t=30.013886219501  60% completed  (60% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 10 received from 9
+** Event #203  t=30.117818481987  60% completed  (60% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 30.117818481987...
+** Event #217  t=30.117892603092  60% completed  (60% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 11 received from 15
+** Event #223  t=35.01381685189  70% completed  (70% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 35.01381685189...
+** Event #237  t=35.013893986683  70% completed  (70% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 12 received from 9
+** Event #238  t=35.117818481987  70% completed  (70% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 35.117818481987...
+** Event #252  t=35.117887370274  70% completed  (70% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 13 received from 15
+** Event #258  t=40.01381685189  80% completed  (80% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 40.01381685189...
+** Event #272  t=40.013888753865  80% completed  (80% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 14 received from 9
+** Event #273  t=40.117818481987  80% completed  (80% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 40.117818481987...
+** Event #287  t=40.117895137456  80% completed  (80% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 15 received from 15
+** Event #293  t=45.01381685189  90% completed  (90% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 45.01381685189...
+** Event #307  t=45.013883521047  90% completed  (90% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 16 received from 9
+** Event #308  t=45.117818481987  90% completed  (90% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 45.117818481987...
+** Event #322  t=45.117889904638  90% completed  (90% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 17 received from 15
+** Event #328  t=50  100% completed  (100% total)   
+
+<!> Simulation time limit reached -- at t=50s, event #328
+
+Calling finish() at end of Run #0...
+[INFO]	------------------------------------
+[INFO]	Pre-Migration partial times: 
+[INFO]	0.206701    0.234434    
+[INFO]	Pre-Migration partial size: 
+[INFO]	-1    0    
+undisposed object: (omnetpp::cMessage) scenario.node[0].appl.PreMigration -- check module destructor
+undisposed object: (omnetpp::cMessage) scenario.node[1].appl.PreMigration -- check module destructor
