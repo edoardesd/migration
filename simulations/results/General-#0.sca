@@ -1,14 +1,14 @@
 version 2
-run General-0-20220216-12:02:33-900
+run General-0-20220217-15:35:28-9655
 attr configname General
-attr datetime 20220216-12:02:33
+attr datetime 20220217-15:35:28
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network scenario
-attr processid 900
+attr processid 9655
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -45,24 +45,24 @@ param *.*.appl.headerLength 10bit
 param *.*.appl.beaconPacketLength 10byte
 param *.node[0].appl.clusterHead true
 param *.*.appl.beaconIntervalDefault 5s
-param *.*.appl.debugMode true
-param *.*.appl.migrationType 0
+param *.*.debugMode false
+param *.*.appl.migrationType 1
 param *.*.appl.preMigrationInterval 5s
-param *.*.appl.clientsStartUp 5s
-param *.*.appl.migrationStart 10s
-param *.*.appl.MQTTpublishers 5
-param *.*.appl.MQTTsubscribers 5
-param *.*.appl.MQTTmsgCount 20
-param *.*.appl.MQTTmsgSize 2048
-param *.*.appl.MQTTmsgQoS 2
-param *.*.appl.MQTTmsgInterval 1000
-param *.*.appl.MQTTmsgPretime 2000
+param *.*.appl.migrationStart 50s
+param *.*.clientsStartUp 10s
+param *.*.MQTTpublishers 5
+param *.*.MQTTsubscribers 25
+param *.*.MQTTmsgCount 100
+param *.*.MQTTmsgSize 20480
+param *.*.MQTTmsgQoS 2
+param *.*.MQTTmsgInterval 500
+param *.*.MQTTmsgPretime 2000
 
 scalar scenario.manager roiArea 0
-scalar scenario.node[0].nic.phy80211p busyTime 1.1755102040816e-05
+scalar scenario.node[0].nic.phy80211p busyTime 1.2282828282828e-05
 scalar scenario.node[0].nic.mac1609_4 ReceivedUnicastPackets 0
-scalar scenario.node[0].nic.mac1609_4 ReceivedBroadcasts 9
-scalar scenario.node[0].nic.mac1609_4 SentPackets 308
+scalar scenario.node[0].nic.mac1609_4 ReceivedBroadcasts 19
+scalar scenario.node[0].nic.mac1609_4 SentPackets 136
 scalar scenario.node[0].nic.mac1609_4 SentAcknowledgements 0
 scalar scenario.node[0].nic.mac1609_4 RetriesExceeded 0
 scalar scenario.node[0].nic.mac1609_4 SNIRLostPackets 0
@@ -70,31 +70,31 @@ scalar scenario.node[0].nic.mac1609_4 RXTXLostPackets 0
 scalar scenario.node[0].nic.mac1609_4 TotalLostPackets 0
 scalar scenario.node[0].nic.mac1609_4 DroppedPacketsInMac 0
 scalar scenario.node[0].nic.mac1609_4 TooLittleTime 0
-scalar scenario.node[0].nic.mac1609_4 TimesIntoBackoff 309
-scalar scenario.node[0].nic.mac1609_4 SlotsBackoff 2252
+scalar scenario.node[0].nic.mac1609_4 TimesIntoBackoff 136
+scalar scenario.node[0].nic.mac1609_4 SlotsBackoff 892
 scalar scenario.node[0].nic.mac1609_4 NumInternalContention 0
-scalar scenario.node[0].nic.mac1609_4 totalBusyTime 0.611764
+scalar scenario.node[0].nic.mac1609_4 totalBusyTime 0.239968
 scalar scenario.node[0].nic.mac1609_4 retriesExceeded:count 0
 attr source org_car2x_veins_modules_mac_sigRetriesExceeded
 scalar scenario.node[0].nic.mac1609_4 sentAcks:count 0
 attr source org_car2x_veins_modules_mac_sigSentAck
-scalar scenario.node[0].nic.mac1609_4 sentPackets:count 308
+scalar scenario.node[0].nic.mac1609_4 sentPackets:count 136
 attr source org_car2x_veins_modules_mac_sigSentPacket
 scalar scenario.node[0].nic.mac1609_4 collisions:count 0
 attr source org_car2x_veins_modules_mac_sigCollision
-scalar scenario.node[0].nic.mac1609_4 channelBusy:timeavg 0.012484979591837
+scalar scenario.node[0].nic.mac1609_4 channelBusy:timeavg 0.0024239191919192
 attr source org_car2x_veins_modules_mac_sigChannelBusy
 scalar scenario.node[0].veinsmobility startTime 1
-scalar scenario.node[0].veinsmobility totalTime 49
-scalar scenario.node[0].veinsmobility stopTime 50
+scalar scenario.node[0].veinsmobility totalTime 99
+scalar scenario.node[0].veinsmobility stopTime 100
 scalar scenario.node[0].veinsmobility minSpeed 0
 scalar scenario.node[0].veinsmobility maxSpeed 0
 scalar scenario.node[0].veinsmobility totalDistance 0
-scalar scenario.node[0].veinsmobility totalCO2Emission 46.704
-scalar scenario.node[1].nic.phy80211p busyTime 0.01246693877551
+scalar scenario.node[0].veinsmobility totalCO2Emission 95.354
+scalar scenario.node[1].nic.phy80211p busyTime 0.0024102626262626
 scalar scenario.node[1].nic.mac1609_4 ReceivedUnicastPackets 0
-scalar scenario.node[1].nic.mac1609_4 ReceivedBroadcasts 308
-scalar scenario.node[1].nic.mac1609_4 SentPackets 9
+scalar scenario.node[1].nic.mac1609_4 ReceivedBroadcasts 136
+scalar scenario.node[1].nic.mac1609_4 SentPackets 19
 scalar scenario.node[1].nic.mac1609_4 SentAcknowledgements 0
 scalar scenario.node[1].nic.mac1609_4 RetriesExceeded 0
 scalar scenario.node[1].nic.mac1609_4 SNIRLostPackets 0
@@ -102,25 +102,25 @@ scalar scenario.node[1].nic.mac1609_4 RXTXLostPackets 0
 scalar scenario.node[1].nic.mac1609_4 TotalLostPackets 0
 scalar scenario.node[1].nic.mac1609_4 DroppedPacketsInMac 0
 scalar scenario.node[1].nic.mac1609_4 TooLittleTime 0
-scalar scenario.node[1].nic.mac1609_4 TimesIntoBackoff 9
-scalar scenario.node[1].nic.mac1609_4 SlotsBackoff 62
+scalar scenario.node[1].nic.mac1609_4 TimesIntoBackoff 19
+scalar scenario.node[1].nic.mac1609_4 SlotsBackoff 148
 scalar scenario.node[1].nic.mac1609_4 NumInternalContention 0
-scalar scenario.node[1].nic.mac1609_4 totalBusyTime 0.611465
+scalar scenario.node[1].nic.mac1609_4 totalBusyTime 0.239851
 scalar scenario.node[1].nic.mac1609_4 retriesExceeded:count 0
 attr source org_car2x_veins_modules_mac_sigRetriesExceeded
 scalar scenario.node[1].nic.mac1609_4 sentAcks:count 0
 attr source org_car2x_veins_modules_mac_sigSentAck
-scalar scenario.node[1].nic.mac1609_4 sentPackets:count 9
+scalar scenario.node[1].nic.mac1609_4 sentPackets:count 19
 attr source org_car2x_veins_modules_mac_sigSentPacket
 scalar scenario.node[1].nic.mac1609_4 collisions:count 0
 attr source org_car2x_veins_modules_mac_sigCollision
-scalar scenario.node[1].nic.mac1609_4 channelBusy:timeavg 0.01247887755102
+scalar scenario.node[1].nic.mac1609_4 channelBusy:timeavg 0.0024227373737374
 attr source org_car2x_veins_modules_mac_sigChannelBusy
 scalar scenario.node[1].veinsmobility startTime 1
-scalar scenario.node[1].veinsmobility totalTime 49
-scalar scenario.node[1].veinsmobility stopTime 50
+scalar scenario.node[1].veinsmobility totalTime 99
+scalar scenario.node[1].veinsmobility stopTime 100
 scalar scenario.node[1].veinsmobility minSpeed 0
 scalar scenario.node[1].veinsmobility maxSpeed 0
 scalar scenario.node[1].veinsmobility totalDistance 0
-scalar scenario.node[1].veinsmobility totalCO2Emission 46.704
+scalar scenario.node[1].veinsmobility totalCO2Emission 95.354
 

@@ -32,7 +32,7 @@ void SimGod::initialize()
     clientsStartUp = par("clientsStartUp");
 
     cMessage* wait_clients = new cMessage("wait_clients", WAIT_CLIENTS);
-    scheduleAt(simTime() + clientsStartUp, wait_clients); 
+    scheduleAt(simTime() + clientsStartUp, wait_clients);
 
     resultPath = createPath();
     EV << "Path: " << resultPath << endl;
@@ -67,7 +67,7 @@ void SimGod::registerMigrationMSG(C2XMessage* msg){
     migMsg.expectedMsg = msg->getExpectedPackets();
     migMsg.totSize = msg->getMigrationSize();
 
-    EV_DEBUG << "Migration Message registered num " << msg->getName() << endl;
+    EV << "Migration Message registered num " << msg->getName() << " - " << migMsg.genTime << "   " << migMsg.recvTime << endl;
 
     auto patternCheckpoint {"checkpoint"};
     auto patternDB {"database"};
@@ -97,6 +97,7 @@ void SimGod::runMQTTClients(){
     pubCmd += " -qos=" + to_string(MQTTmsgQoS);
     pubCmd += " -intervaltime=" + to_string(MQTTmsgInterval);
     pubCmd += " -pretime=" + to_string(MQTTmsgPretime);
+//    pubCmd += " -topic=\"/mqtt-bench/benchmark/" + to_string(rand() % 100) + "\"";
     pubCmd += " -x";
 
     string subCmd = "sudo podman run -d --rm --name bench-sub docker.io/flipperthedog/mqtt-bench mqtt-bench -action=sub";
@@ -127,7 +128,7 @@ void SimGod::migrationSummary(std::vector<migrationInfo> _vector, string type){
         totalBytes += i.bytes;
     }
     int totalMsg = _vector.size();
-    simtime_t totalTime = _vector.back().recvTime - _vector.front().genTime;
+    simtime_t totalTime = _vector.back().recvTime - _vector.front().recvTime;
     EV << "------------------------------------" << endl;
     EV << "FINAL SUMMARY: " << type << endl;
     EV << "Chunk transmitted: " << totalMsg << "/" << _vector.back().expectedMsg << percentage(totalMsg, _vector.back().expectedMsg) << endl;

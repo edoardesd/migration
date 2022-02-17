@@ -30,8 +30,12 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 # Object files for local .cc, .msg and .sm files
 OBJS = \
     $O/application/containerVehicles.o \
+    $O/modules/BaseApplLayer.o \
+    $O/modules/BaseLayer.o \
+    $O/modules/BaseMacLayer.o \
+    $O/utility/coldMigration.o \
     $O/utility/helpers.o \
-    $O/utility/migration.o \
+    $O/utility/preMigration.o \
     $O/utility/SimGod.o \
     $O/message/C2XMessage_m.o \
     $O/message/TimeoutMSG_m.o

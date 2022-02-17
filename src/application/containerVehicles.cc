@@ -109,26 +109,26 @@ void containerVehicles::handleSelfMsg(cMessage* msg) {
         }
 
         case SELF_SEND_MOVE: {
-            EV << "Given speed: " << defaultSpeed << endl;
+//            EV << "Given speed: " << defaultSpeed << endl;
 //            traciVehicle->setSpeed(defaultSpeed);
             EV << applId << " - Timer expired. Moving now." << endl;
             if (isClusterHead){
-
                 if (migrationType == 0){
                     // start cold migration
                     cm->start();
 
-                    EV << "Check p size: " << cm->getCheckpointSize() << " bytes. Database size: " << cm->getDBSize() << " bytes."<< endl;
-
-                    sendMigrationPacket(cm->getCheckpointSize(), "checkpoint");
-                    sendMigrationPacket(cm->getDBSize(), "database");
+                    sendMigrationPacket(cm->getCheckpointSize(), "COLD_checkpoint");
+                    sendMigrationPacket(cm->getDBSize(), "COLD_database");
                 }
 
                 if (migrationType == 1){
-                    EV << "Check p size: " << pm->getCheckpointSize() << " bytes. Database size: " << pm->getDBSize() << " bytes."<< endl;
+//                    EV << "Check p size: " << pm->getCheckpointSize() << " bytes. Database size: " << pm->getDBSize() << " bytes."<< endl;
 
                     pm->startFinal();
+                    sendMigrationPacket(pm->getCheckpointSize(), "PRE_checkpoint");
+                    sendMigrationPacket(pm->getDBSize(), "PRE_database");
                 }
+                EV << "Check p size: " << cm->getCheckpointSize() << " bytes. Database size: " << cm->getDBSize() << " bytes."<< endl;
 
                 migrationDone = true;
             }
@@ -184,7 +184,7 @@ void containerVehicles::sendMigrationPacket(long size, string basename){
     string msgname;
     basename += "-#";
 
-    EV_DEBUG << "Total # of packets " << numMigrationPackets << endl;
+    EV << "Total # of packets " << numMigrationPackets << endl;
 
     for (int i=0; i<numMigrationPackets; i++){
         msgname = basename + to_string(i);
@@ -242,7 +242,7 @@ void containerVehicles::populateAndSendPacket(C2XMessage* pkt, LAddress::L2Type 
     pkt->setUserPriority(userType);
     pkt->setId(getSimulation()->getUniqueNumber());
     pkt->setSender(myMAC);
-    pkt->setSendTime(simTime());
+    pkt->setSendTime(simTime()); // TODO set right send time
 
     sendDown(pkt);
 }
@@ -257,20 +257,31 @@ void containerVehicles::sendDown(cMessage* msg) {
 }
 
 void containerVehicles::finish() {
-    if (preMigrationTime.size() > 0){
-        EV << "------------------------------------" << endl;
-        EV << "Pre-Migration partial times: " << endl;
-        for (auto t: preMigrationTime){
-            EV << t << "    " ;
-        }
-        EV << endl;
 
-         EV << "Pre-Migration partial size: " << endl;
-        for (auto t: preMigrationSize){
-            EV << t << "    " ;
+    if (isClusterHead){
+        if (migrationType == 0){
+        EV << "------------------------------------" << endl;
+        EV << "Checkpoint dump time: " << cm->getTimeCheckpoint() << endl;
+        EV << "Database dump time: " << cm->getTimeDB() << endl;
         }
-        EV << endl;
+        if (preMigrationTime.size() > 0){
+            EV << "------------------------------------" << endl;
+            EV << "Pre-Migration partial times: " << endl;
+            for (auto t: preMigrationTime){
+                EV << t << "    " ;
+            }
+            EV << endl;
+
+            EV << "Pre-Migration partial size: " << endl;
+            for (auto t: preMigrationSize){
+                EV << t << "    " ;
+            }
+            EV << endl;
+
+            EV << "Total pre migration time: " << pm->getTotalPreMigrationTime() << endl;
+        }
     }
+
 //    cancelAndDelete(sendBeaconEvt);
 //    cancelAndDelete(moveEvt);
 }

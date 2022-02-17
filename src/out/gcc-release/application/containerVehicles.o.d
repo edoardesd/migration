@@ -52,7 +52,8 @@ out/gcc-release//application/containerVehicles.o: \
  application/../utility/App2GodInterface.h \
  application/../utility/helpers.h \
  application/../utility/../message/C2XMessage_m.h \
- application/../utility/migration.h
+ application/../utility/coldMigration.h \
+ application/../utility/preMigration.h
 
 application/containerVehicles.h:
 
@@ -162,4 +163,6 @@ application/../utility/helpers.h:
 
 application/../utility/../message/C2XMessage_m.h:
 
-application/../utility/migration.h:
+application/../utility/coldMigration.h:
+
+application/../utility/preMigration.h:

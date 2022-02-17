@@ -1,57 +1,10 @@
-#include "migration.h"
+#include "preMigration.h"
 
 using namespace std;
 
 // TODO broker name as param (broker0)
 
-ColdMigration::ColdMigration(std::string path) {
-//    this->path = "/home/antedo/migration/results_criu/";
-//    this->path += getDay() + "/" + getTime();
-//
-//    createFolder(this->path);
-    this->path = path;
-}
-
-void ColdMigration::start(){
-    cout << endl;
-    cout << "+++ Starting cold migration +++" << endl;
-
-    EV << "PATH check " << this->path <<endl;
-
-    string cmd_checkpoint = "sudo podman container checkpoint --leave-running --tcp-established --export ";
-    cmd_checkpoint += this->path + "/final_checkpoint.tar.gz broker0";
-    this->timeCheckpoint = command_time(cmd_checkpoint);
-
-    cout << "+++ Dumping the database +++" << endl;
-    string cmd_db = "sudo podman cp broker0:/mosquitto/data/mosquitto.db " + this->path + "/final_database.db";
-    this->timeDB = command_time(cmd_db);
-
-//    print_time(time_checkpoint, time_db);
-}
-
-long ColdMigration::getCheckpointSize(){
-    string path = this->path + "/final_checkpoint.tar.gz";
-    this->checkpointSize = GetFileSize(path);
-    return this->checkpointSize;
-}
-
-long ColdMigration::getDBSize(){
-    string path = this->path + "/final_database.db";
-    this->dbSize = GetFileSize(path);
-    return this->dbSize;
-}
-
-simtime_t ColdMigration::getTimeDB(){
-    return this->timeDB;
-}
-
-simtime_t ColdMigration::getTimeCheckpoint(){
-    return this->timeCheckpoint;
-}
-
 /** PREMIGRATION */
-//TODO new file
-
 
 PreMigration::PreMigration(std::string path){
     this->path = path;
@@ -81,6 +34,7 @@ long PreMigration::runIteration(){
 
         this->iterationSize = GetFileSize(this->path + "/" + diffFileName) * 2;
     } else {
+        this->startPreMigTime = high_resolution_clock::now();
         this->iterationSize = GetFileSize(this->path + "/0_database.db");
     }
 
@@ -89,12 +43,26 @@ long PreMigration::runIteration(){
 
     this->iterationTime = duration.count()/1000000.0;
     this->iterationNumber++;
+//    lastPreMigTime = high_resolution_clock::now();
 
     return this->iterationSize;
 }
 
 float PreMigration::getIterationTime(){
     return this->iterationTime;
+}
+
+void PreMigration::setTotalPreMigrationTime(){
+//    cout << "coumpte sthis stajisad" << this->startPreMigTime << endl;
+    auto duration = duration_cast<microseconds>(high_resolution_clock::now() - this->startPreMigTime);
+    cout << duration.count() << endl;
+    this->totalPreMigrationTime = duration.count()/1000000.0;
+//    cout  << final << endl;
+//    return final;
+}
+
+float PreMigration::getTotalPreMigrationTime(){
+    return this->totalPreMigrationTime;
 }
 
 long PreMigration::getCheckpointSize(){
@@ -106,6 +74,8 @@ long PreMigration::getCheckpointSize(){
 long PreMigration::getDBSize(){
     string path = this->path + "/final_diff.txt";
     this->dbSize = GetFileSize(path);
+    if (!this->dbSize)
+        this->dbSize = 1;
     return this->dbSize;
 }
 
@@ -113,7 +83,9 @@ void PreMigration::startFinal(){
     cout << endl;
     cout << "+++ Starting final pre migration +++" << endl;
 
-    EV << "PATH check " << this->path <<endl;
+    setTotalPreMigrationTime();
+    cout << "Total PreMigration time: " << getTotalPreMigrationTime() << endl;
+//    EV << "PATH check " << this->path <<endl;
 
     string cmd_checkpoint = "sudo podman container checkpoint --leave-running --tcp-established --export ";
     cmd_checkpoint += this->path + "/final_checkpoint.tar.gz broker0";

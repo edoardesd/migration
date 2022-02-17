@@ -1,12 +1,12 @@
 
-Running configuration General, run #0...
-Assigned runID=General-0-20220216-11:58:54-31075
+Running configuration test, run #0...
+Assigned runID=test-0-20220217-16:04:15-27560
 Setting up network "scenario"...
 Initializing...
 Initializing module scenario, stage 0
 Initializing module scenario.simGod, stage 0
 [INFO]	[SIMGOD] === Welcome from SimGod ===
-[INFO]	Path: /home/antedo/migration/results_criu/0216/11-58
+[INFO]	Path: /home/antedo/migration/results_criu/0217/16-04
 Initializing module scenario.annotations, stage 0
 Initializing module scenario.world, stage 0
 Initializing module scenario.connectionManager, stage 0
@@ -31,100 +31,558 @@ Initializing module scenario.node[1].appl, stage 1
 [INFO]	ApplID: 1 - MAC ADDR: 15
 [INFO]	1 - Setting beacon time.
 Initializing module scenario.node[1].veinsmobility, stage 1
-** Event #6  t=5  10% completed  (10% total)   scenario.simGod (SimGod, id=2)
-[INFO]	[SIMGOD] Start clients NOW!
-** Event #8  t=5.01381685189  10% completed  (10% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #7  t=5.01381685189  5% completed  (5% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Sending beacon at time 5.01381685189...
-** Event #22  t=5.013886383591  10% completed  (10% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #21  t=5.013886383591  5% completed  (5% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Beacon # 0 received from 9
-** Event #23  t=5.117818481987  10% completed  (10% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #22  t=5.117818481987  5% completed  (5% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Sending beacon at time 5.117818481987...
-** Event #37  t=5.117892767182  10% completed  (10% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #36  t=5.117892767182  5% completed  (5% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Beacon # 1 received from 15
-** Event #38  t=5.117892767182  10% completed  (10% total)   scenario.node[0].appl (containerVehicles, id=8)
-** Event #44  t=10.01381685189  20% completed  (20% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #37  t=5.117892767182  5% completed  (5% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #42  t=10  10% completed  (10% total)   scenario.simGod (SimGod, id=2)
+[INFO]	[SIMGOD] Start clients NOW!
+** Event #44  t=10.01381685189  10% completed  (10% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Sending beacon at time 10.01381685189...
-** Event #58  t=10.013894150773  20% completed  (20% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #58  t=10.013894150773  10% completed  (10% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Beacon # 2 received from 9
-** Event #59  t=10.117818481987  20% completed  (20% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #59  t=10.117818481987  10% completed  (10% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Sending beacon at time 10.117818481987...
-** Event #73  t=10.117887534364  20% completed  (20% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #73  t=10.117887534364  10% completed  (10% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Beacon # 3 received from 15
-** Event #74  t=10.117892767182  20% completed  (20% total)   scenario.node[0].appl (containerVehicles, id=8)
-** Event #80  t=15.01381685189  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #74  t=10.117892767182  10% completed  (10% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #80  t=15.01381685189  15% completed  (15% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Sending beacon at time 15.01381685189...
-** Event #87  t=15.013886383591  30% completed  (30% total)   scenario.node[1].appl (containerVehicles, id=14)
-[INFO]	Given speed: 0
-[INFO]	1 - Timer expired. Moving now.
-** Event #95  t=15.013888917955  30% completed  (30% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #94  t=15.013888917955  15% completed  (15% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Beacon # 4 received from 9
-** Event #96  t=15.117818481987  30% completed  (30% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #95  t=15.117818481987  15% completed  (15% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Sending beacon at time 15.117818481987...
-** Event #103  t=15.117892767182  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
-[INFO]	Given speed: 0
-[INFO]	0 - Timer expired. Moving now.
-[INFO]	Check p size: -1 bytes. Database size: -1 bytes.
-[INFO]	PATH check /home/antedo/migration/results_criu/0216/11-58
-** Event #104  t=15.117892767182  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
-** Event #112  t=15.117895301546  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #102  t=15.117892767182  15% completed  (15% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #110  t=15.117895301546  15% completed  (15% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Beacon # 5 received from 15
-** Event #118  t=20.01381685189  40% completed  (40% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #116  t=20.01381685189  20% completed  (20% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Sending beacon at time 20.01381685189...
-** Event #132  t=20.013883685137  40% completed  (40% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #130  t=20.013883685137  20% completed  (20% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Beacon # 6 received from 9
-** Event #133  t=20.117818481987  40% completed  (40% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #131  t=20.117818481987  20% completed  (20% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Sending beacon at time 20.117818481987...
-** Event #147  t=20.117890068728  40% completed  (40% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #145  t=20.117890068728  20% completed  (20% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Beacon # 7 received from 15
-** Event #153  t=25.01381685189  50% completed  (50% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #146  t=20.117892767182  20% completed  (20% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #152  t=25.01381685189  25% completed  (25% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Sending beacon at time 25.01381685189...
-** Event #167  t=25.013891452319  50% completed  (50% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #166  t=25.013891452319  25% completed  (25% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Beacon # 8 received from 9
-** Event #168  t=25.117818481987  50% completed  (50% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #167  t=25.117818481987  25% completed  (25% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Sending beacon at time 25.117818481987...
-** Event #182  t=25.11788483591  50% completed  (50% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #181  t=25.11788483591  25% completed  (25% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Beacon # 9 received from 15
-** Event #188  t=30.01381685189  60% completed  (60% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #182  t=25.117892767182  25% completed  (25% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #188  t=30.01381685189  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Sending beacon at time 30.01381685189...
-** Event #202  t=30.013886219501  60% completed  (60% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #202  t=30.013886219501  30% completed  (30% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Beacon # 10 received from 9
-** Event #203  t=30.117818481987  60% completed  (60% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #203  t=30.117818481987  30% completed  (30% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Sending beacon at time 30.117818481987...
-** Event #217  t=30.117892603092  60% completed  (60% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #217  t=30.117892603092  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Beacon # 11 received from 15
-** Event #223  t=35.01381685189  70% completed  (70% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #218  t=30.117892767182  30% completed  (30% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #224  t=35.01381685189  35% completed  (35% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Sending beacon at time 35.01381685189...
-** Event #237  t=35.013893986683  70% completed  (70% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #238  t=35.013893986683  35% completed  (35% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Beacon # 12 received from 9
-** Event #238  t=35.117818481987  70% completed  (70% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #239  t=35.117818481987  35% completed  (35% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Sending beacon at time 35.117818481987...
-** Event #252  t=35.117887370274  70% completed  (70% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #253  t=35.117887370274  35% completed  (35% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Beacon # 13 received from 15
-** Event #258  t=40.01381685189  80% completed  (80% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #254  t=35.117892767182  35% completed  (35% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #260  t=40.01381685189  40% completed  (40% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Sending beacon at time 40.01381685189...
-** Event #272  t=40.013888753865  80% completed  (80% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #274  t=40.013888753865  40% completed  (40% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Beacon # 14 received from 9
-** Event #273  t=40.117818481987  80% completed  (80% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #275  t=40.117818481987  40% completed  (40% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Sending beacon at time 40.117818481987...
-** Event #287  t=40.117895137456  80% completed  (80% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #282  t=40.117892767182  40% completed  (40% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #290  t=40.117895137456  40% completed  (40% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Beacon # 15 received from 15
-** Event #293  t=45.01381685189  90% completed  (90% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #296  t=45.01381685189  45% completed  (45% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Sending beacon at time 45.01381685189...
-** Event #307  t=45.013883521047  90% completed  (90% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #310  t=45.013883521047  45% completed  (45% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Beacon # 16 received from 9
-** Event #308  t=45.117818481987  90% completed  (90% total)   scenario.node[1].appl (containerVehicles, id=14)
+** Event #311  t=45.117818481987  45% completed  (45% total)   scenario.node[1].appl (containerVehicles, id=14)
 [INFO]	1 - Sending beacon at time 45.117818481987...
-** Event #322  t=45.117889904638  90% completed  (90% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #325  t=45.117889904638  45% completed  (45% total)   scenario.node[0].appl (containerVehicles, id=8)
 [INFO]	0 - Beacon # 17 received from 15
-** Event #328  t=50  100% completed  (100% total)   
+** Event #326  t=45.117892767182  45% completed  (45% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #332  t=50.01381685189  50% completed  (50% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 50.01381685189...
+** Event #346  t=50.013891288229  50% completed  (50% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 18 received from 9
+** Event #347  t=50.117818481987  50% completed  (50% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 50.117818481987...
+** Event #361  t=50.11788467182  50% completed  (50% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 19 received from 15
+** Event #362  t=50.117892767182  50% completed  (50% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #368  t=55.01381685189  55% completed  (55% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 55.01381685189...
+** Event #382  t=55.013886055411  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 20 received from 9
+** Event #383  t=55.013886383591  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Timer expired. Moving now.
+** Event #384  t=55.117818481987  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 55.117818481987...
+** Event #398  t=55.117892439002  55% completed  (55% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 21 received from 15
+** Event #399  t=55.117892767182  55% completed  (55% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Timer expired. Moving now.
+[INFO]	Total # of packets 119
+[INFO]	Total # of packets 1
+[INFO]	Check p size: 178002 bytes. Database size: 104471 bytes.
+** Event #400  t=55.117892767182  55% completed  (55% total)   scenario.node[0].appl (containerVehicles, id=8)
+** Event #533  t=55.120051822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#0
+[INFO]	Migration Message registered num PRE_checkpoint-#0 - 55.117892767182   55.120051822593
+** Event #546  t=55.122275822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#1
+[INFO]	Migration Message registered num PRE_checkpoint-#1 - 55.117892767182   55.122275822593
+** Event #559  t=55.124486822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#2
+[INFO]	Migration Message registered num PRE_checkpoint-#2 - 55.117892767182   55.124486822593
+** Event #572  t=55.126697822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#3
+[INFO]	Migration Message registered num PRE_checkpoint-#3 - 55.117892767182   55.126697822593
+** Event #585  t=55.128895822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#4
+[INFO]	Migration Message registered num PRE_checkpoint-#4 - 55.117892767182   55.128895822593
+** Event #598  t=55.131158822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#5
+[INFO]	Migration Message registered num PRE_checkpoint-#5 - 55.117892767182   55.131158822593
+** Event #611  t=55.133356822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#6
+[INFO]	Migration Message registered num PRE_checkpoint-#6 - 55.117892767182   55.133356822593
+** Event #624  t=55.135684822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#7
+[INFO]	Migration Message registered num PRE_checkpoint-#7 - 55.117892767182   55.135684822593
+** Event #637  t=55.137856822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#8
+[INFO]	Migration Message registered num PRE_checkpoint-#8 - 55.117892767182   55.137856822593
+** Event #650  t=55.140015822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#9
+[INFO]	Migration Message registered num PRE_checkpoint-#9 - 55.117892767182   55.140015822593
+** Event #663  t=55.142174822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#10
+[INFO]	Migration Message registered num PRE_checkpoint-#10 - 55.117892767182   55.142174822593
+** Event #676  t=55.144359822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#11
+[INFO]	Migration Message registered num PRE_checkpoint-#11 - 55.117892767182   55.144359822593
+** Event #689  t=55.146544822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#12
+[INFO]	Migration Message registered num PRE_checkpoint-#12 - 55.117892767182   55.146544822593
+** Event #702  t=55.148794822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#13
+[INFO]	Migration Message registered num PRE_checkpoint-#13 - 55.117892767182   55.148794822593
+** Event #715  t=55.150953822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#14
+[INFO]	Migration Message registered num PRE_checkpoint-#14 - 55.117892767182   55.150953822593
+** Event #728  t=55.153242822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#15
+[INFO]	Migration Message registered num PRE_checkpoint-#15 - 55.117892767182   55.153242822593
+** Event #741  t=55.155427822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#16
+[INFO]	Migration Message registered num PRE_checkpoint-#16 - 55.117892767182   55.155427822593
+** Event #754  t=55.157625822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#17
+[INFO]	Migration Message registered num PRE_checkpoint-#17 - 55.117892767182   55.157625822593
+** Event #767  t=55.159810822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#18
+[INFO]	Migration Message registered num PRE_checkpoint-#18 - 55.117892767182   55.159810822593
+** Event #780  t=55.161982822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#19
+[INFO]	Migration Message registered num PRE_checkpoint-#19 - 55.117892767182   55.161982822593
+** Event #793  t=55.164258822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#20
+[INFO]	Migration Message registered num PRE_checkpoint-#20 - 55.117892767182   55.164258822593
+** Event #806  t=55.166547822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#21
+[INFO]	Migration Message registered num PRE_checkpoint-#21 - 55.117892767182   55.166547822593
+** Event #819  t=55.168849822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#22
+[INFO]	Migration Message registered num PRE_checkpoint-#22 - 55.117892767182   55.168849822593
+** Event #832  t=55.171008822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#23
+[INFO]	Migration Message registered num PRE_checkpoint-#23 - 55.117892767182   55.171008822593
+** Event #845  t=55.173206822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#24
+[INFO]	Migration Message registered num PRE_checkpoint-#24 - 55.117892767182   55.173206822593
+** Event #858  t=55.175469822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#25
+[INFO]	Migration Message registered num PRE_checkpoint-#25 - 55.117892767182   55.175469822593
+** Event #871  t=55.177810822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#26
+[INFO]	Migration Message registered num PRE_checkpoint-#26 - 55.117892767182   55.177810822593
+** Event #884  t=55.180008822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#27
+[INFO]	Migration Message registered num PRE_checkpoint-#27 - 55.117892767182   55.180008822593
+** Event #897  t=55.182336822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#28
+[INFO]	Migration Message registered num PRE_checkpoint-#28 - 55.117892767182   55.182336822593
+** Event #910  t=55.184534822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#29
+[INFO]	Migration Message registered num PRE_checkpoint-#29 - 55.117892767182   55.184534822593
+** Event #923  t=55.186719822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#30
+[INFO]	Migration Message registered num PRE_checkpoint-#30 - 55.117892767182   55.186719822593
+** Event #936  t=55.189034822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#31
+[INFO]	Migration Message registered num PRE_checkpoint-#31 - 55.117892767182   55.189034822593
+** Event #949  t=55.191245822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#32
+[INFO]	Migration Message registered num PRE_checkpoint-#32 - 55.117892767182   55.191245822593
+** Event #962  t=55.193560822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#33
+[INFO]	Migration Message registered num PRE_checkpoint-#33 - 55.117892767182   55.193560822593
+** Event #975  t=55.195888822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#34
+[INFO]	Migration Message registered num PRE_checkpoint-#34 - 55.117892767182   55.195888822593
+** Event #988  t=55.198151822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#35
+[INFO]	Migration Message registered num PRE_checkpoint-#35 - 55.117892767182   55.198151822593
+** Event #1001  t=55.200427822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#36
+[INFO]	Migration Message registered num PRE_checkpoint-#36 - 55.117892767182   55.200427822593
+** Event #1014  t=55.202664822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#37
+[INFO]	Migration Message registered num PRE_checkpoint-#37 - 55.117892767182   55.202664822593
+** Event #1027  t=55.204836822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#38
+[INFO]	Migration Message registered num PRE_checkpoint-#38 - 55.117892767182   55.204836822593
+** Event #1040  t=55.207138822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#39
+[INFO]	Migration Message registered num PRE_checkpoint-#39 - 55.117892767182   55.207138822593
+** Event #1053  t=55.209362822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#40
+[INFO]	Migration Message registered num PRE_checkpoint-#40 - 55.117892767182   55.209362822593
+** Event #1066  t=55.211625822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#41
+[INFO]	Migration Message registered num PRE_checkpoint-#41 - 55.117892767182   55.211625822593
+** Event #1079  t=55.213810822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#42
+[INFO]	Migration Message registered num PRE_checkpoint-#42 - 55.117892767182   55.213810822593
+** Event #1092  t=55.216112822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#43
+[INFO]	Migration Message registered num PRE_checkpoint-#43 - 55.117892767182   55.216112822593
+** Event #1105  t=55.218388822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#44
+[INFO]	Migration Message registered num PRE_checkpoint-#44 - 55.117892767182   55.218388822593
+** Event #1118  t=55.220703822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#45
+[INFO]	Migration Message registered num PRE_checkpoint-#45 - 55.117892767182   55.220703822593
+** Event #1131  t=55.222901822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#46
+[INFO]	Migration Message registered num PRE_checkpoint-#46 - 55.117892767182   55.222901822593
+** Event #1144  t=55.225190822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#47
+[INFO]	Migration Message registered num PRE_checkpoint-#47 - 55.117892767182   55.225190822593
+** Event #1157  t=55.227427822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#48
+[INFO]	Migration Message registered num PRE_checkpoint-#48 - 55.117892767182   55.227427822593
+** Event #1170  t=55.229677822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#49
+[INFO]	Migration Message registered num PRE_checkpoint-#49 - 55.117892767182   55.229677822593
+** Event #1183  t=55.231940822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#50
+[INFO]	Migration Message registered num PRE_checkpoint-#50 - 55.117892767182   55.231940822593
+** Event #1196  t=55.234242822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#51
+[INFO]	Migration Message registered num PRE_checkpoint-#51 - 55.117892767182   55.234242822593
+** Event #1209  t=55.236596822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#52
+[INFO]	Migration Message registered num PRE_checkpoint-#52 - 55.117892767182   55.236596822593
+** Event #1222  t=55.238794822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#53
+[INFO]	Migration Message registered num PRE_checkpoint-#53 - 55.117892767182   55.238794822593
+** Event #1235  t=55.240992822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#54
+[INFO]	Migration Message registered num PRE_checkpoint-#54 - 55.117892767182   55.240992822593
+** Event #1248  t=55.243320822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#55
+[INFO]	Migration Message registered num PRE_checkpoint-#55 - 55.117892767182   55.243320822593
+** Event #1261  t=55.245596822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#56
+[INFO]	Migration Message registered num PRE_checkpoint-#56 - 55.117892767182   55.245596822593
+** Event #1274  t=55.247794822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#57
+[INFO]	Migration Message registered num PRE_checkpoint-#57 - 55.117892767182   55.247794822593
+** Event #1287  t=55.250109822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#58
+[INFO]	Migration Message registered num PRE_checkpoint-#58 - 55.117892767182   55.250109822593
+** Event #1300  t=55.252398822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#59
+[INFO]	Migration Message registered num PRE_checkpoint-#59 - 55.117892767182   55.252398822593
+** Event #1313  t=55.254648822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#60
+[INFO]	Migration Message registered num PRE_checkpoint-#60 - 55.117892767182   55.254648822593
+** Event #1326  t=55.256963822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#61
+[INFO]	Migration Message registered num PRE_checkpoint-#61 - 55.117892767182   55.256963822593
+** Event #1339  t=55.259135822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#62
+[INFO]	Migration Message registered num PRE_checkpoint-#62 - 55.117892767182   55.259135822593
+** Event #1352  t=55.261346822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#63
+[INFO]	Migration Message registered num PRE_checkpoint-#63 - 55.117892767182   55.261346822593
+** Event #1365  t=55.263570822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#64
+[INFO]	Migration Message registered num PRE_checkpoint-#64 - 55.117892767182   55.263570822593
+** Event #1378  t=55.265729822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#65
+[INFO]	Migration Message registered num PRE_checkpoint-#65 - 55.117892767182   55.265729822593
+** Event #1391  t=55.267901822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#66
+[INFO]	Migration Message registered num PRE_checkpoint-#66 - 55.117892767182   55.267901822593
+** Event #1404  t=55.270164822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#67
+[INFO]	Migration Message registered num PRE_checkpoint-#67 - 55.117892767182   55.270164822593
+** Event #1417  t=55.272375822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#68
+[INFO]	Migration Message registered num PRE_checkpoint-#68 - 55.117892767182   55.272375822593
+** Event #1430  t=55.274625822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#69
+[INFO]	Migration Message registered num PRE_checkpoint-#69 - 55.117892767182   55.274625822593
+** Event #1443  t=55.276966822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#70
+[INFO]	Migration Message registered num PRE_checkpoint-#70 - 55.117892767182   55.276966822593
+** Event #1456  t=55.279151822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#71
+[INFO]	Migration Message registered num PRE_checkpoint-#71 - 55.117892767182   55.279151822593
+** Event #1469  t=55.281479822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#72
+[INFO]	Migration Message registered num PRE_checkpoint-#72 - 55.117892767182   55.281479822593
+** Event #1482  t=55.283794822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#73
+[INFO]	Migration Message registered num PRE_checkpoint-#73 - 55.117892767182   55.283794822593
+** Event #1495  t=55.285979822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#74
+[INFO]	Migration Message registered num PRE_checkpoint-#74 - 55.117892767182   55.285979822593
+** Event #1508  t=55.288229822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#75
+[INFO]	Migration Message registered num PRE_checkpoint-#75 - 55.117892767182   55.288229822593
+** Event #1521  t=55.290570822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#76
+[INFO]	Migration Message registered num PRE_checkpoint-#76 - 55.117892767182   55.290570822593
+** Event #1534  t=55.292755822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#77
+[INFO]	Migration Message registered num PRE_checkpoint-#77 - 55.117892767182   55.292755822593
+** Event #1547  t=55.294927822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#78
+[INFO]	Migration Message registered num PRE_checkpoint-#78 - 55.117892767182   55.294927822593
+** Event #1560  t=55.297151822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#79
+[INFO]	Migration Message registered num PRE_checkpoint-#79 - 55.117892767182   55.297151822593
+** Event #1573  t=55.299310822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#80
+[INFO]	Migration Message registered num PRE_checkpoint-#80 - 55.117892767182   55.299310822593
+** Event #1586  t=55.301612822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#81
+[INFO]	Migration Message registered num PRE_checkpoint-#81 - 55.117892767182   55.301612822593
+** Event #1599  t=55.303771822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#82
+[INFO]	Migration Message registered num PRE_checkpoint-#82 - 55.117892767182   55.303771822593
+** Event #1612  t=55.306060822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#83
+[INFO]	Migration Message registered num PRE_checkpoint-#83 - 55.117892767182   55.306060822593
+** Event #1625  t=55.308271822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#84
+[INFO]	Migration Message registered num PRE_checkpoint-#84 - 55.117892767182   55.308271822593
+** Event #1638  t=55.310534822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#85
+[INFO]	Migration Message registered num PRE_checkpoint-#85 - 55.117892767182   55.310534822593
+** Event #1651  t=55.312836822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#86
+[INFO]	Migration Message registered num PRE_checkpoint-#86 - 55.117892767182   55.312836822593
+** Event #1664  t=55.315034822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#87
+[INFO]	Migration Message registered num PRE_checkpoint-#87 - 55.117892767182   55.315034822593
+** Event #1677  t=55.317362822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#88
+[INFO]	Migration Message registered num PRE_checkpoint-#88 - 55.117892767182   55.317362822593
+** Event #1690  t=55.319573822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#89
+[INFO]	Migration Message registered num PRE_checkpoint-#89 - 55.117892767182   55.319573822593
+** Event #1703  t=55.321888822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#90
+[INFO]	Migration Message registered num PRE_checkpoint-#90 - 55.117892767182   55.321888822593
+** Event #1716  t=55.324177822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#91
+[INFO]	Migration Message registered num PRE_checkpoint-#91 - 55.117892767182   55.324177822593
+** Event #1729  t=55.326388822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#92
+[INFO]	Migration Message registered num PRE_checkpoint-#92 - 55.117892767182   55.326388822593
+** Event #1742  t=55.328586822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#93
+[INFO]	Migration Message registered num PRE_checkpoint-#93 - 55.117892767182   55.328586822593
+** Event #1755  t=55.330849822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#94
+[INFO]	Migration Message registered num PRE_checkpoint-#94 - 55.117892767182   55.330849822593
+** Event #1768  t=55.333008822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#95
+[INFO]	Migration Message registered num PRE_checkpoint-#95 - 55.117892767182   55.333008822593
+** Event #1781  t=55.335232822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#96
+[INFO]	Migration Message registered num PRE_checkpoint-#96 - 55.117892767182   55.335232822593
+** Event #1794  t=55.337547822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#97
+[INFO]	Migration Message registered num PRE_checkpoint-#97 - 55.117892767182   55.337547822593
+** Event #1807  t=55.339758822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#98
+[INFO]	Migration Message registered num PRE_checkpoint-#98 - 55.117892767182   55.339758822593
+** Event #1820  t=55.341956822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#99
+[INFO]	Migration Message registered num PRE_checkpoint-#99 - 55.117892767182   55.341956822593
+** Event #1833  t=55.344180822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#100
+[INFO]	Migration Message registered num PRE_checkpoint-#100 - 55.117892767182   55.344180822593
+** Event #1846  t=55.346404822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#101
+[INFO]	Migration Message registered num PRE_checkpoint-#101 - 55.117892767182   55.346404822593
+** Event #1859  t=55.348719822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#102
+[INFO]	Migration Message registered num PRE_checkpoint-#102 - 55.117892767182   55.348719822593
+** Event #1872  t=55.350969822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#103
+[INFO]	Migration Message registered num PRE_checkpoint-#103 - 55.117892767182   55.350969822593
+** Event #1885  t=55.353193822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#104
+[INFO]	Migration Message registered num PRE_checkpoint-#104 - 55.117892767182   55.353193822593
+** Event #1898  t=55.355352822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#105
+[INFO]	Migration Message registered num PRE_checkpoint-#105 - 55.117892767182   55.355352822593
+** Event #1911  t=55.357641822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#106
+[INFO]	Migration Message registered num PRE_checkpoint-#106 - 55.117892767182   55.357641822593
+** Event #1924  t=55.359956822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#107
+[INFO]	Migration Message registered num PRE_checkpoint-#107 - 55.117892767182   55.359956822593
+** Event #1937  t=55.362193822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#108
+[INFO]	Migration Message registered num PRE_checkpoint-#108 - 55.117892767182   55.362193822593
+** Event #1950  t=55.364456822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#109
+[INFO]	Migration Message registered num PRE_checkpoint-#109 - 55.117892767182   55.364456822593
+** Event #1963  t=55.366693822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#110
+[INFO]	Migration Message registered num PRE_checkpoint-#110 - 55.117892767182   55.366693822593
+** Event #1976  t=55.368956822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#111
+[INFO]	Migration Message registered num PRE_checkpoint-#111 - 55.117892767182   55.368956822593
+** Event #1989  t=55.371206822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#112
+[INFO]	Migration Message registered num PRE_checkpoint-#112 - 55.117892767182   55.371206822593
+** Event #2002  t=55.373521822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#113
+[INFO]	Migration Message registered num PRE_checkpoint-#113 - 55.117892767182   55.373521822593
+** Event #2015  t=55.375849822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#114
+[INFO]	Migration Message registered num PRE_checkpoint-#114 - 55.117892767182   55.375849822593
+** Event #2028  t=55.378060822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#115
+[INFO]	Migration Message registered num PRE_checkpoint-#115 - 55.117892767182   55.378060822593
+** Event #2041  t=55.380401822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#116
+[INFO]	Migration Message registered num PRE_checkpoint-#116 - 55.117892767182   55.380401822593
+** Event #2054  t=55.382573822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#117
+[INFO]	Migration Message registered num PRE_checkpoint-#117 - 55.117892767182   55.382573822593
+** Event #2067  t=55.384211822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_checkpoint-#118
+[INFO]	Migration Message registered num PRE_checkpoint-#118 - 55.117892767182   55.384211822593
+** Event #2080  t=55.384435822593  55% completed  (55% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Migration received: PRE_database-#0
+[INFO]	Migration Message registered num PRE_database-#0 - 55.117892767182   55.384435822593
+** Event #2086  t=60.01381685189  60% completed  (60% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 60.01381685189...
+** Event #2100  t=60.013884822593  60% completed  (60% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 142 received from 9
+** Event #2101  t=60.117818481987  60% completed  (60% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 60.117818481987...
+** Event #2115  t=60.117891206184  60% completed  (60% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 143 received from 15
+** Event #2121  t=65.01381685189  65% completed  (65% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 65.01381685189...
+** Event #2135  t=65.013892589775  65% completed  (65% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 144 received from 9
+** Event #2136  t=65.117818481987  65% completed  (65% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 65.117818481987...
+** Event #2150  t=65.117885973366  65% completed  (65% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 145 received from 15
+** Event #2156  t=70.01381685189  70% completed  (70% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 70.01381685189...
+** Event #2170  t=70.013887356957  70% completed  (70% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 146 received from 9
+** Event #2171  t=70.117818481987  70% completed  (70% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 70.117818481987...
+** Event #2185  t=70.117893740548  70% completed  (70% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 147 received from 15
+** Event #2191  t=75.01381685189  75% completed  (75% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 75.01381685189...
+** Event #2205  t=75.013895124139  75% completed  (75% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 148 received from 9
+** Event #2206  t=75.117818481987  75% completed  (75% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 75.117818481987...
+** Event #2220  t=75.11788850773  75% completed  (75% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 149 received from 15
+** Event #2226  t=80.01381685189  80% completed  (80% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 80.01381685189...
+** Event #2240  t=80.013889891321  80% completed  (80% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 150 received from 9
+** Event #2241  t=80.117818481987  80% completed  (80% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 80.117818481987...
+** Event #2255  t=80.117896274912  80% completed  (80% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 151 received from 15
+** Event #2261  t=85.01381685189  85% completed  (85% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 85.01381685189...
+** Event #2275  t=85.013884658503  85% completed  (85% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 152 received from 9
+** Event #2276  t=85.117818481987  85% completed  (85% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 85.117818481987...
+** Event #2290  t=85.117891042094  85% completed  (85% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 153 received from 15
+** Event #2296  t=90.01381685189  90% completed  (90% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 90.01381685189...
+** Event #2310  t=90.013892425685  90% completed  (90% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 154 received from 9
+** Event #2311  t=90.117818481987  90% completed  (90% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 90.117818481987...
+** Event #2325  t=90.117885809276  90% completed  (90% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 155 received from 15
+** Event #2331  t=95.01381685189  95% completed  (95% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Sending beacon at time 95.01381685189...
+** Event #2345  t=95.013887192867  95% completed  (95% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Beacon # 156 received from 9
+** Event #2346  t=95.117818481987  95% completed  (95% total)   scenario.node[1].appl (containerVehicles, id=14)
+[INFO]	1 - Sending beacon at time 95.117818481987...
+** Event #2360  t=95.117893576458  95% completed  (95% total)   scenario.node[0].appl (containerVehicles, id=8)
+[INFO]	0 - Beacon # 157 received from 15
+** Event #2366  t=100  100% completed  (100% total)   
 
-<!> Simulation time limit reached -- at t=50s, event #328
+<!> Simulation time limit reached -- at t=100s, event #2366
 
 Calling finish() at end of Run #0...
 [INFO]	------------------------------------
+[INFO]	FINAL SUMMARY: CHECKPOINT
+[INFO]	Chunk transmitted: 119/119-->100.00%
+[INFO]	Bytes transmitted: 178002/178002-->100.00%
+[INFO]	Time elapsed: 0.26416 sec. 
+[INFO]	------------------------------------
+[INFO]	FINAL SUMMARY: DATABASE
+[INFO]	Chunk transmitted: 1/1-->100.00%
+[INFO]	Bytes transmitted: 1/1-->100.00%
+[INFO]	Time elapsed: 0 sec. 
+[INFO]	------------------------------------
 [INFO]	Pre-Migration partial times: 
-[INFO]	0.206701    0.234434    
+[INFO]	0.184257    0.200661    0.194924    0.206175    0.195115    0.196333    0.19672    0.354026    0.284946    0.299949    
 [INFO]	Pre-Migration partial size: 
-[INFO]	-1    0    
+[INFO]	-1    0    0    0    0    0    0    0    11818    0    
+[INFO]	Total pre migration time: 0.711001
 undisposed object: (omnetpp::cMessage) scenario.node[0].appl.PreMigration -- check module destructor
 undisposed object: (omnetpp::cMessage) scenario.node[1].appl.PreMigration -- check module destructor

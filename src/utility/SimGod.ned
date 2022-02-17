@@ -15,16 +15,10 @@
 
 package containerVehicles.utility;
 
-//
-// TODO auto-generated module
-//
 simple SimGod
 {
     parameters:
         @class(SimGod);
-        // int maxPacketLength = default(1500byte) @unit("byte"); //packet length of the application
-        // int packetLengthMigration = default(7000byte) @unit("byte");
-
         bool debugMode = default(true);
 
         int MQTTpublishers = default(5);

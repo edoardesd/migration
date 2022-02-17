@@ -18,6 +18,7 @@
 
 #include <vector>
 #include <regex>
+#include <stdlib.h>
 
 #include "App2GodInterface.h"
 #include "helpers.h"
