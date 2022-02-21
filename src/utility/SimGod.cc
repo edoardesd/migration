@@ -67,22 +67,34 @@ void SimGod::registerMigrationMSG(C2XMessage* msg){
     migMsg.expectedMsg = msg->getExpectedPackets();
     migMsg.totSize = msg->getMigrationSize();
 
-    EV << "Migration Message registered num " << msg->getName() << " - " << migMsg.genTime << "   " << migMsg.recvTime << endl;
+    EV << "Migration Message registered num " << msg->getName() << " - " << migMsg.genTime << "   " << migMsg.recvTime;
 
     auto patternCheckpoint {"checkpoint"};
     auto patternDB {"database"};
+    auto patternIteration {"ITER"};
     auto rxCheckpoint = std::regex{ patternCheckpoint, std::regex_constants::icase };
     auto rxDatabase = std::regex{ patternDB, std::regex_constants::icase };
+    auto rxIteration = std::regex{ patternIteration, std::regex_constants::icase };
     bool isCheckpoint = std::regex_search(msg->getName(), rxCheckpoint);
     bool isDatabase = std::regex_search(msg->getName(), rxDatabase);
+    bool isIteration = std::regex_search(msg->getName(), rxIteration);
 
     if (isCheckpoint){
+        EV << " as checkpoint." << endl;
         migrationCheckpoint.push_back(migMsg);
     }
 
     if (isDatabase){
+        EV << " as database." << endl;
         migrationDatabase.push_back(migMsg);
     }
+
+    if (isIteration){
+        iterNum = charToInt(msg->getName()[0]);
+        EV << " as iteration number " << iterNum << endl;
+        migrationIterations[iterNum].push_back(migMsg);
+    }
+
 }
 
 void SimGod::runMQTTClients(){
@@ -118,8 +130,26 @@ void SimGod::finish() {
     if (migrationCheckpoint.size() > 0){
         migrationSummary(migrationCheckpoint, "CHECKPOINT");
         migrationSummary(migrationDatabase, "DATABASE");
+
+        preMigrationSummary();
     }
-    //TODO add recovery time on the second machine
+
+}
+
+void SimGod::preMigrationSummary(){
+    simtime_t migTime;
+    simtime_t totMigTime;
+    EV << "------------------------------------" << endl;
+    EV << "ITERATION SUMMARY: " << endl;
+    for (int i=0; i<10; i++){
+        if(migrationIterations[i].size() > 0){
+            migTime = migrationIterations[i].back().recvTime - migrationIterations[i].front().recvTime;
+            totMigTime += migTime;
+            EV << migTime << "\t";
+        }
+    }
+    EV << endl;
+    EV << "Total iteration time: " << totMigTime << endl;
 }
 
 void SimGod::migrationSummary(std::vector<migrationInfo> _vector, string type){

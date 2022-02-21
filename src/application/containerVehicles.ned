@@ -28,9 +28,9 @@ simple containerVehicles like IBaseApplLayer
         int migrationStart = default(10s) @unit(s); //in this time the vehicle has speed 0 m/s
 
         int migrationType = default(0); //0 for cold migration, 1 for pre-migration, 2 for post-selective-migration
-        // int life = default(3); //life of the node, when it leaves the range of an other node
-        
-        // int timeoutBeacon = default(5s) @unit(s);
+
+        double preMigrationSize = default(102400byte) @unit("byte");
+
 		double beaconIntervalDefault = default(1s) @unit(s); //the interval between 2 beacon messages
 	    double preMigrationInterval = default(5s) @unit(s); //the interval for a new iteration of the pre-migration
 		bool avoidBeaconSynchronization = default(true);

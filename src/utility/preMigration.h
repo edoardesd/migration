@@ -1,6 +1,7 @@
 #ifndef PREMIGRATION_H
 #define PREMIGRATION_H
 
+#include <math.h>
 #include <omnetpp.h>
 #include <string>
 #include <sys/stat.h>
@@ -12,7 +13,7 @@ using namespace omnetpp;
 class PreMigration {
 
     public:
-    PreMigration(std::string path);
+    PreMigration(std::string path, double size);
 
     /** Premigration iteration */
     long runIteration();
@@ -20,10 +21,16 @@ class PreMigration {
     void startFinal();
     float getTotalPreMigrationTime();
 
+
     /** Getters */
     long getCheckpointSize();
     long getDBSize();
+    long getSentSize();
     float getIterationTime();
+    simtime_t getTimeDB();
+    simtime_t getTimeCheckpoint();
+    std::string getIterationName();
+
 
     private:
     int iterationNumber;
@@ -34,6 +41,8 @@ class PreMigration {
     float totalPreMigrationTime;
     long dbSize;
     long checkpointSize;
+    long size;
+    long sentSize = 0;
 
     simtime_t timeDB;
     simtime_t timeCheckpoint;

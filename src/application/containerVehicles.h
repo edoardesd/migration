@@ -21,6 +21,7 @@
 #include "../utility/coldMigration.h"
 #include "../utility/preMigration.h"
 
+#include <numeric>
 #include <string>
 
 using namespace veins;
@@ -72,10 +73,11 @@ protected:
 protected:
     long beaconPacketLength;
     long maxPacketLength;
-    int applId;
     float defaultSpeed;
+    int applId;
     int migrationStart;
     int migrationType;
+    double dbSize;
 
     bool sendBeaconsMode;
     bool isClusterHead;

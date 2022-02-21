@@ -56,6 +56,8 @@ void containerVehicles::initialize(int stage) {
         migrationType = par("migrationType");
         preMigrationInterval = par("preMigrationInterval");
         isClusterHead = par("clusterHead");
+        dbSize = par("preMigrationSize");
+
 
 
         applId = myApplAddr();
@@ -76,7 +78,7 @@ void containerVehicles::initialize(int stage) {
         simtime_t firstBeacon = simTime();
 
         cm = new ColdMigration(simGod->getPath());
-        pm = new PreMigration(simGod->getPath());
+        pm = new PreMigration(simGod->getPath(), dbSize);
     }
     else if (stage == 1) {
         applId = myApplAddr();
@@ -138,8 +140,10 @@ void containerVehicles::handleSelfMsg(cMessage* msg) {
 
         case SELF_PRE_MIGRATION: {
             if (migrationDone == false){
-                preMigrationSize.push_back(pm->runIteration());
+                long this_size = pm->runIteration();
+                preMigrationSize.push_back(this_size);
                 preMigrationTime.push_back(pm->getIterationTime());
+                sendMigrationPacket(this_size, pm->getIterationName());
                 scheduleAt(simTime() + preMigrationInterval, msg);
             }
             break;
@@ -259,27 +263,38 @@ void containerVehicles::sendDown(cMessage* msg) {
 void containerVehicles::finish() {
 
     if (isClusterHead){
-        if (migrationType == 0){
-        EV << "------------------------------------" << endl;
-        EV << "Checkpoint dump time: " << cm->getTimeCheckpoint() << endl;
-        EV << "Database dump time: " << cm->getTimeDB() << endl;
-        }
         if (preMigrationTime.size() > 0){
             EV << "------------------------------------" << endl;
-            EV << "Pre-Migration partial times: " << endl;
+            EV << "PRE-MIGRATION:" << endl;
+            EV << "Partial db-dump times: " << endl;
             for (auto t: preMigrationTime){
-                EV << t << "    " ;
+                EV << t << "\t" ;
             }
             EV << endl;
 
-            EV << "Pre-Migration partial size: " << endl;
+            EV << "Partial db-size: " << endl;
             for (auto t: preMigrationSize){
                 EV << t << "    " ;
             }
             EV << endl;
 
-            EV << "Total pre migration time: " << pm->getTotalPreMigrationTime() << endl;
+            EV << "Total size sent: " << pm->getSentSize() << endl;
+            EV << "Overall pre migration time: " << pm->getTotalPreMigrationTime() << endl;
+            EV << "Effective pm time: " << std::accumulate(preMigrationTime.begin(), preMigrationTime.end(),decltype(preMigrationTime)::value_type(0)) << endl;
+
         }
+        EV << "------------------------------------" << endl;
+        EV << "FINAL DUMP (save) TIME:" << endl;
+        if (migrationType == 0){
+            EV << "Checkpoint: " << cm->getTimeCheckpoint() << endl;
+            EV << "Database: " << cm->getTimeDB() << endl;
+        }
+
+        if (migrationType == 1){
+            EV << "Checkpoint: " << pm->getTimeCheckpoint() << endl;
+            EV << "Database: " << pm->getTimeDB() << endl;
+        }
+
     }
 
 //    cancelAndDelete(sendBeaconEvt);

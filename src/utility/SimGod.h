@@ -52,12 +52,13 @@ protected:
     virtual void finish();
     virtual void runMQTTClients();
 
-
 private:
     std::vector<migrationInfo> migrationCheckpoint;
     std::vector<migrationInfo> migrationDatabase;
+    std::vector<migrationInfo> migrationIterations[10];
     int expectedCheckpoint;
     int expectedDatabase;
+    int iterNum = 0;
     long sizeCheckpoint;
     long sizeDatabase;
     bool debugMode = true;
@@ -75,6 +76,7 @@ private:
 
     /** Print stats for migration type */
     void migrationSummary(std::vector<migrationInfo> _vector, string type);
+    void preMigrationSummary();
 
 
 };

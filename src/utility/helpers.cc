@@ -163,3 +163,11 @@ int createDirTreeRecursive(std::string path){
 
     return 0;
 }
+
+int charToInt(char s){
+    stringstream str;
+    str << s;
+    int x;
+    str >> x;
+    return x;
+}

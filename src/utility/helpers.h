@@ -48,4 +48,7 @@ std::string createPath();
 /** Create a full directory tree */
 int createDirTreeRecursive(std::string path);
 
+/** convert char to unsigned int */
+int charToInt(char s);
+
 #endif
