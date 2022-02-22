@@ -45,6 +45,7 @@ public:
     /** Store struct msg in a vector for further analysis */
     void registerMigrationMSG(C2XMessage *msg);
     std::string getPath();
+    std::string getLogName();
 
 protected:
     virtual void initialize();
@@ -59,12 +60,16 @@ private:
     int expectedCheckpoint;
     int expectedDatabase;
     int iterNum = 0;
+    int repetitionLabel;
     long sizeCheckpoint;
     long sizeDatabase;
     bool debugMode = true;
     std::string ipAddressCH;
     std::string resultPath;
+    std::string externalPath;
     simtime_t clientsStartUp;
+
+    simsignal_t arrivalSignal;
 
     int MQTTpublishers;
     int MQTTsubscribers;

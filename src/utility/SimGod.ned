@@ -21,6 +21,8 @@ simple SimGod
         @class(SimGod);
         bool debugMode = default(true);
 
+        int repetitionLabel = default(0);
+
         int MQTTpublishers = default(5);
         int MQTTsubscribers = default(5);
         int MQTTmsgCount = default(20);
@@ -28,6 +30,8 @@ simple SimGod
         int MQTTmsgQoS = default(2);
         int MQTTmsgInterval = default(1000);
         int MQTTmsgPretime = default(2000);
+
+        string externalPath = default("asd");
 
         int clientsStartUp = default(5s) @unit("s");
 }

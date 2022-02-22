@@ -131,7 +131,7 @@ std::string getTime(){
 
 std::string createPath(){
     std::string path;
-    path = "/home/antedo/migration/results_criu/";
+    path = "/home/antedo/code_vehicles/results-sim/";
     path += getDay() + "/" + getTime();
 //    createFolder(path);
     return path;

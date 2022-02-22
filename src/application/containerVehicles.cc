@@ -272,7 +272,7 @@ void containerVehicles::finish() {
             }
             EV << endl;
 
-            EV << "Partial db-size: " << endl;
+            EV << "Partial db-ssize: " << endl;
             for (auto t: preMigrationSize){
                 EV << t << "    " ;
             }
@@ -295,6 +295,9 @@ void containerVehicles::finish() {
             EV << "Database: " << pm->getTimeDB() << endl;
         }
 
+        string logCommand = "mv /home/antedo/code_vehicles/simulations/log.txt ";
+        logCommand += simGod->getPath() + "/" +simGod->getLogName() + ".txt";
+        run_command(logCommand);
     }
 
 //    cancelAndDelete(sendBeaconEvt);

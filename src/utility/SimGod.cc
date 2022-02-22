@@ -20,6 +20,8 @@ void SimGod::initialize()
 {
     EV << "[SIMGOD] === Welcome from SimGod ===" << endl;
 
+    arrivalSignal = registerSignal("arrival");
+
     MQTTpublishers = par("MQTTpublishers");
     MQTTsubscribers = par("MQTTsubscribers");
     MQTTmsgCount = par("MQTTmsgCount");
@@ -28,14 +30,19 @@ void SimGod::initialize()
     MQTTmsgInterval = par("MQTTmsgInterval");
     MQTTmsgPretime = par("MQTTmsgPretime");
     debugMode = par("debugMode");
+    repetitionLabel = par("repetitionLabel");
+    externalPath = par("externalPath").stringValue();
 
     clientsStartUp = par("clientsStartUp");
 
     cMessage* wait_clients = new cMessage("wait_clients", WAIT_CLIENTS);
     scheduleAt(simTime() + clientsStartUp, wait_clients);
 
+
     resultPath = createPath();
+    resultPath = externalPath + to_string(repetitionLabel);
     EV << "Path: " << resultPath << endl;
+    EV << "External path: " << externalPath << endl;
     createDirTreeRecursive(resultPath);
 
     if (!debugMode){
@@ -132,6 +139,8 @@ void SimGod::finish() {
         migrationSummary(migrationDatabase, "DATABASE");
 
         preMigrationSummary();
+
+        emit(arrivalSignal, 6666);
     }
 
 }
@@ -168,4 +177,11 @@ void SimGod::migrationSummary(std::vector<migrationInfo> _vector, string type){
 
 std::string SimGod::getPath(){
     return resultPath;
+}
+
+std::string SimGod::getLogName(){
+    std::string logName = to_string(repetitionLabel) + "_PUB" + to_string(MQTTpublishers);
+    logName += "_SUB" + to_string(MQTTsubscribers);
+    logName += "_SIZE" + to_string(MQTTmsgSize);
+    return logName;
 }
